@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  th {
+    @apply border-b border-slate-200 bg-slate-50 px-3 py-3 text-xs font-bold uppercase tracking-wide text-slate-500;
+  }
+
+  td {
+    @apply border-b border-slate-100 px-3 py-3 align-middle;
+  }
+
+  td small {
+    @apply mt-1 block text-xs text-slate-500;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-10 items-center justify-center rounded-md bg-orange-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-orange-700;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-10 items-center justify-center rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm transition hover:bg-slate-50;
+  }
+
+  .icon-btn {
+    @apply inline-flex min-h-8 items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-bold text-slate-600 hover:bg-slate-50;
+  }
+
+  .icon-btn.danger {
+    @apply border-red-100 text-red-600 hover:bg-red-50;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100;
+  }
+
+  .label {
+    @apply mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500;
+  }
+
+  .nav-button {
+    @apply flex w-full items-center rounded-md px-3 py-2 text-left text-sm font-semibold text-slate-600 transition hover:bg-orange-50 hover:text-orange-700;
+  }
+
+  .nav-button.active {
+    @apply bg-orange-50 text-orange-700;
+  }
+
+  .link {
+    @apply p-0 text-left font-bold text-slate-900 hover:text-orange-700;
+  }
+
+  .badge {
+    @apply inline-flex min-h-6 items-center rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-600;
+  }
+
+  .badge.won,
+  .badge.high {
+    @apply bg-emerald-50 text-emerald-700;
+  }
+
+  .badge.lost {
+    @apply bg-red-50 text-red-700;
+  }
+
+  .badge.proposal,
+  .badge.medium {
+    @apply bg-amber-50 text-amber-700;
+  }
+
+  .badge.qualified {
+    @apply bg-blue-50 text-blue-700;
+  }
+
+  .badge.contacted,
+  .badge.low {
+    @apply bg-violet-50 text-violet-700;
+  }
+
+  .stream-chip {
+    @apply inline-flex min-h-6 items-center rounded bg-sky-50 px-2 py-1 text-xs font-bold text-sky-800 ring-1 ring-sky-100;
+  }
+
+  .stream-option {
+    @apply flex min-h-10 cursor-pointer items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:border-orange-200 hover:bg-orange-50;
+  }
+
+  .stream-option input {
+    @apply h-4 w-4 accent-orange-600;
+  }
+
+  .stream-option.selected {
+    @apply border-orange-300 bg-orange-50 text-orange-800;
+  }
+
+  .timeline-item {
+    @apply grid gap-1 rounded-lg border border-slate-200 bg-white p-3 text-sm;
+  }
+
+  .timeline-item b {
+    @apply text-slate-900;
+  }
+
+  .timeline-item span {
+    @apply text-slate-600;
+  }
+
+  .timeline-item small {
+    @apply text-xs text-slate-400;
+  }
+}
